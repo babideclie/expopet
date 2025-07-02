@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expopet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <img src="Imagens/logo-removebg-preview.png" alt="ExpoPet Logo" class="logo-image">
+        <button class="login-btn">
+          <i class="fas fa-user"></i> Login
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <img src="https://images.unsplash.com/photo-1629740067905-bd3f515aa739?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+             alt="Cachorro feliz no parque" class="hero-image">
+        
+        <div class="hero-cta">
+          <h1>Anuncie seu cão ou gato aqui...</h1>
+          <button class="cta-button">
+            <i class="fas fa-plus-circle"></i> Anunciar grátis
+          </button>
+          
+          <div class="filter-buttons">
+            <button class="filter-btn">
+              <i class="fas fa-map-marker-alt"></i> Estado
+            </button>
+            <button class="filter-btn">
+              <i class="fas fa-city"></i> Cidade
+            </button>
+            <button class="filter-btn">
+              <i class="fas fa-paw"></i> Raça
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Listings Section -->
+  <section class="container">
+    <h2 class="section-title">Destaques</h2>
+    <div class="cards-grid fade-in">
+      
+      <!-- Featured Card 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=220&q=80" 
+             alt="Lhasa Apso" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Lhasa Apso Fêmea</h3>
+          <p class="card-price">R$ 1.000</p>
+          <p class="card-info">
+            <i class="fas fa-paw"></i> Lhasa Apso
+          </p>
+          <p class="card-info">
+            <i class="fas fa-phone"></i> (31) 98744-4444
+          </p>
+          <p class="card-info">
+            <i class="fas fa-map-marker-alt"></i> Neide - Belo Horizonte, MG
+          </p>
+          <p class="card-description">
+            Cachorrinha muito meiga com dois meses de idade que está buscando por um lar...
+          </p>
+          <button class="card-button">
+            <i class="fas fa-info-circle"></i> Mais informações
+          </button>
+        </div>
+      </div>
+
+      <!-- Featured Card 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=220&q=80" 
+             alt="Lhasa Apso" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Lhasa Apso Macho</h3>
+          <p class="card-price">R$ 1.200</p>
+          <p class="card-info">
+            <i class="fas fa-paw"></i> Lhasa Apso
+          </p>
+          <p class="card-info">
+            <i class="fas fa-phone"></i> (31) 98744-4444
+          </p>
+          <p class="card-info">
+            <i class="fas fa-map-marker-alt"></i> Carlos - Belo Horizonte, MG
+          </p>
+          <p class="card-description">
+            Filhote de Lhasa Apso macho, muito brincalhão e carinhoso, pronto para um novo lar...
+          </p>
+          <button class="card-button">
+            <i class="fas fa-info-circle"></i> Mais informações
+          </button>
+        </div>
+      </div>
+
+      <!-- Featured Card 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=220&q=80" 
+             alt="Gato preto" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Gato Preto Jovem</h3>
+          <p class="card-price">R$ 550</p>
+          <p class="card-info">
+            <i class="fas fa-paw"></i> SRD (Sem Raça Definida)
+          </p>
+          <p class="card-info">
+            <i class="fas fa-phone"></i> (31) 98744-4444
+          </p>
+          <p class="card-info">
+            <i class="fas fa-map-marker-alt"></i> Gustavo - Uberlândia, MG
+          </p>
+          <p class="card-description">
+            Gato preto agitado, porém adora uma companhia e procura um lar amoroso...
+          </p>
+          <button class="card-button">
+            <i class="fas fa-info-circle"></i> Mais informações
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Recent Listings Section -->
+  <section class="container">
+    <h2 class="section-title">Últimos Anúncios</h2>
+    <div class="cards-grid fade-in">
+      
+      <!-- Recent Card 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=220&q=80" 
+             alt="Golden Retriever" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Golden Retriever</h3>
+          <p class="card-price">R$ 2.500</p>
+          <p class="card-info">
+            <i class="fas fa-paw"></i> Golden Retriever
+          </p>
+          <p class="card-info">
+            <i class="fas fa-phone"></i> (11) 99999-9999
+          </p>
+          <p class="card-info">
+            <i class="fas fa-map-marker-alt"></i> Ana - São Paulo, SP
+          </p>
+          <p class="card-description">
+            Filhote de Golden Retriever de 3 meses, muito dócil e ideal para famílias...
+          </p>
+          <button class="card-button">
+            <i class="fas fa-info-circle"></i> Mais informações
+          </button>
+        </div>
+      </div>
+
+      <!-- Recent Card 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=220&q=80" 
+             alt="Gato Siamês" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Gato Siamês</h3>
+          <p class="card-price">R$ 800</p>
+          <p class="card-info">
+            <i class="fas fa-paw"></i> Siamês
+          </p>
+          <p class="card-info">
+            <i class="fas fa-phone"></i> (21) 88888-8888
+          </p>
+          <p class="card-info">
+            <i class="fas fa-map-marker-alt"></i> Pedro - Rio de Janeiro, RJ
+          </p>
+          <p class="card-description">
+            Gato Siamês adulto, muito elegante e carinhoso, castrado e vacinado...
+          </p>
+          <button class="card-button">
+            <i class="fas fa-info-circle"></i> Mais informações
+          </button>
+        </div>
+      </div>
+
+      <!-- Recent Card 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=220&q=80" 
+             alt="Bulldog Francês" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Bulldog Francês</h3>
+          <p class="card-price">R$ 3.200</p>
+          <p class="card-info">
+            <i class="fas fa-paw"></i> Bulldog Francês
+          </p>
+          <p class="card-info">
+            <i class="fas fa-phone"></i> (85) 77777-7777
+          </p>
+          <p class="card-info">
+            <i class="fas fa-map-marker-alt"></i> Maria - Fortaleza, CE
+          </p>
+          <p class="card-description">
+            Bulldog Francês macho, cor creme, com pedigree e todas as vacinas em dia...
+          </p>
+          <button class="card-button">
+            <i class="fas fa-info-circle"></i> Mais informações
+          </button>
+        </div>
+      </div>
+
+      <!-- Recent Card 4 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=220&q=80" 
+             alt="Gato para adoção" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Gatinho para Adoção</h3>
+          <p class="card-price" style="color: #e74c3c;">ADOÇÃO GRATUITA</p>
+          <p class="card-info">
+            <i class="fas fa-paw"></i> SRD
+          </p>
+          <p class="card-info">
+            <i class="fas fa-phone"></i> (31) 66666-6666
+          </p>
+          <p class="card-info">
+            <i class="fas fa-map-marker-alt"></i> ONG - Contagem, MG
+          </p>
+          <p class="card-description">
+            Gatinho resgatado procura família amorosa. Castrado, vacinado e vermifugado...
+          </p>
+          <button class="card-button">
+            <i class="fas fa-heart"></i> Quero adotar
+          </button>
+        </div>
+      </div>
+
+      <!-- Recent Card 5 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=220&q=80" 
+             alt="Border Collie" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Border Collie</h3>
+          <p class="card-price">R$ 1.800</p>
+          <p class="card-info">
+            <i class="fas fa-paw"></i> Border Collie
+          </p>
+          <p class="card-info">
+            <i class="fas fa-phone"></i> (47) 55555-5555
+          </p>
+          <p class="card-info">
+            <i class="fas fa-map-marker-alt"></i> João - Blumenau, SC
+          </p>
+          <p class="card-description">
+            Border Collie inteligente e ativo, ideal para pessoas que gostam de exercícios...
+          </p>
+          <button class="card-button">
+            <i class="fas fa-info-circle"></i> Mais informações
+          </button>
+        </div>
+      </div>
+
+      <!-- Placeholder Card for More Ads -->
+      <div class="card placeholder-card">
+        <i class="fas fa-plus-circle"></i>
+        <h3>Anuncie Aqui!</h3>
+        <p>Seu pet pode ser o próximo a encontrar um novo lar</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="security-badge">
+          <i class="fas fa-shield-alt security-icon"></i>
+          <div>
+            <strong>SITE 100%</strong><br>
+            <small>SEGURO</small>
+          </div>
+        </div>
+        
+        <p class="footer-text">
+          Este site é próprio para ligar quem anuncia seu pet e quem deseja adquirir um, 
+          seja por compra ou adoção.
+        </p>
+        
+        <button class="footer-cta-btn">
+          <i class="fas fa-plus-circle"></i> Anunciar grátis
+        </button>
+      </div>
+      
+      <p class="copyright">©2025 EXPOPET - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Simple JavaScript for interactions -->
+  <script>
+    // Smooth scroll for buttons (placeholder functionality)
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        // Add click animation
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          this.style.transform = '';
+        }, 150);
+      });
+    });
+
+    // Add hover effects for cards
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.borderColor = '#90fca7';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.borderColor = 'transparent';
+      });
+    });
+
+    // Fade in animation on scroll
+    function fadeInOnScroll() {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('fade-in');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', fadeInOnScroll);
+    
+    // Console message for developers
+    console.log('🐾 ExpoPet - Marketplace de Pets desenvolvido com amor!');
+  </script>
+</body>
+
+</html>
