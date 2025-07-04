@@ -16,7 +16,7 @@
       <div class="header-content">
         <img src="Imagens/logo-removebg-preview.png" alt="ExpoPet Logo" class="logo-image">
         <button class="login-btn">
-          <i class="fas fa-user"></i> Login
+          Login
         </button>
       </div>
     </div>
@@ -31,7 +31,7 @@
         
         <div class="hero-cta">
           <h1>Anuncie seu cão ou gato aqui...</h1>
-          <button class="cta-button">
+          <button class="cta-button" id="btn-anunciar">
             <i class="fas fa-plus-circle"></i> Anunciar grátis
           </button>
           
@@ -291,7 +291,7 @@
           seja por compra ou adoção.
         </p>
         
-        <button class="footer-cta-btn">
+        <button class="footer-cta-btn" id="btn-anunciar-rodape">
           <i class="fas fa-plus-circle"></i> Anunciar grátis
         </button>
       </div>
@@ -338,6 +338,27 @@
     }
 
     window.addEventListener('scroll', fadeInOnScroll);
+
+    // Procurando o botão
+    const botaoLogin = document.querySelector('.login-btn');
+
+    // Dizendo o que ele faz quando for clicado
+    botaoLogin.addEventListener('click', function() {
+    window.location.href = 'modal.html'; // vai pra outra página
+    });
+
+    // Botão "Anunciar grátis"
+    const botaoAnunciar = document.getElementById('btn-anunciar');
+    botaoAnunciar.addEventListener('click', function() {
+    window.location.href = 'modal.html';
+    });
+
+    // Botão "Anunciar grátis" do rodapé
+    const botaoAnunciarRodape = document.getElementById('btn-anunciar-rodape');
+    botaoAnunciarRodape.addEventListener('click', function() {
+    window.location.href = 'modal.html';
+    });
+
     
     // Console message for developers
     console.log('🐾 ExpoPet - Marketplace de Pets desenvolvido com amor!');
