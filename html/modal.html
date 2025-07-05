@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExpoPet - Login Modal</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="../css/modal.css">
 </head>
 <body>
     <div class="demo-bg"></div>
@@ -167,9 +167,9 @@
             
             // Simulate redirect after 2 seconds
             setTimeout(() => {
-                closeModal();
-                // window.location.href = '/dashboard'; // Redirect to user dashboard
-            }, 2000);
+                window.location.href = 'painel.html'; // Agora vai pro painel!
+            }, 500);
+
         }
 
         // Handle register form submission
@@ -196,6 +196,12 @@
             
             // Clear form
             event.target.reset();
+
+            // ADICIONADOOOO
+            setTimeout(() => {
+                window.location.href = 'painel.html'; // Vai pro painel também!
+            }, 500);
+
         }
 
         // Social login functionality
@@ -206,8 +212,8 @@
             // Here you would integrate with Google/Facebook OAuth
             // For demo purposes, simulate success
             setTimeout(() => {
-                closeModal();
-            }, 2000);
+                window.location.href = 'painel.html';
+            }, 500);
         }
 
         // Show success message

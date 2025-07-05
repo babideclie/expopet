@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpoPet - Dashboard</title>
+    <link rel="stylesheet" href="../css/painel.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">EXPOPET</a>
+        <div class="user-info">
+            <span class="user-name">Nome do Usuário</span>
+            <img src="https://via.placeholder.com/45x45?text=USER" alt="Avatar do usuário" class="user-avatar">
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="#meus-anuncios">
+                            <span class="icon">📋</span>
+                            <span>Meus Anúncios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#favoritos">
+                            <span class="icon">💜</span>
+                            <span>Favoritos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#minhas-fichas">
+                            <span class="icon">💰</span>
+                            <span>Minhas Fichas</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="theme-toggle">
+                    <span class="theme-icon">☀️</span>
+                    <span>Tema Claro</span>
+                </div>
+                
+                <div class="settings-dropdown">
+                    <button class="settings-btn" onclick="toggleDropdown()">
+                        <span>⚙️</span>
+                        <span>Configurações</span>
+                        <span style="margin-left: auto;">▼</span>
+                    </button>
+                    <div class="dropdown-content" id="settingsDropdown">
+                        <a href="#meus-dados">Meus Dados</a>
+                        <a href="#alterar-senha">Alterar Senha</a>
+                        <a href="#comprar-fichas">Comprar Fichas</a>
+                        <a href="#suporte">Suporte</a>
+                        <a href="#termos">Termos de Uso</a>
+                        <a href="#" onclick="logout()">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="welcome-section">
+                <h1 class="welcome-title">Bem-vindo ao seu Dashboard!</h1>
+                <p class="welcome-subtitle">Gerencie seus anúncios e encontre o pet perfeito</p>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <div class="dashboard-card" onclick="navigateTo('anunciar')">
+                    <div class="card-icon">📢</div>
+                    <h3 class="card-title">Anunciar</h3>
+                    <p class="card-description">Publique um novo anúncio do seu pet</p>
+                </div>
+
+                <div class="dashboard-card" onclick="navigateTo('pesquisar')">
+                    <div class="card-icon">🔍</div>
+                    <h3 class="card-title">Pesquisar Pet</h3>
+                    <p class="card-description">Encontre o pet ideal para você</p>
+                </div>
+
+                <div class="dashboard-card" onclick="navigateTo('visitantes')">
+                    <div class="card-icon">🐾</div>
+                    <h3 class="card-title">Visitantes</h3>
+                    <p class="card-description">Veja quem visitou seus anúncios</p>
+                </div>
+
+                <div class="dashboard-card" onclick="navigateTo('adocao')">
+                    <div class="card-icon">🔍</div>
+                    <h3 class="card-title">Adoção</h3>
+                    <p class="card-description">Pets disponíveis para adoção</p>
+                </div>
+
+                <div class="dashboard-card" onclick="navigateTo('perfil')">
+                    <div class="card-icon">👁️</div>
+                    <h3 class="card-title">Visualizar Perfil</h3>
+                    <p class="card-description">Veja como outros veem seu perfil</p>
+                </div>
+
+                <div class="dashboard-card" onclick="navigateTo('doacao')">
+                    <div class="card-icon">💝</div>
+                    <h3 class="card-title">Doação</h3>
+                    <p class="card-description">Contribua com a causa animal</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Toggle dropdown menu
+        function toggleDropdown() {
+            const dropdown = document.getElementById('settingsDropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('settingsDropdown');
+            const settingsBtn = document.querySelector('.settings-btn');
+            
+            if (!settingsBtn.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.remove('show');
+            }
+        });
+
+        // Navigation function
+        function navigateTo(section) {
+            console.log(`Navigating to: ${section}`);
+            // Here you would implement the actual navigation logic
+            // For now, we'll just show an alert
+            const sectionNames = {
+                'anunciar': 'Anunciar Pet',
+                'pesquisar': 'Pesquisar Pet',
+                'visitantes': 'Visitantes',
+                'adocao': 'Adoção',
+                'perfil': 'Visualizar Perfil',
+                'doacao': 'Doação'
+            };
+            
+            alert(`Redirecionando para: ${sectionNames[section]}`);
+        }
+
+        // Theme toggle functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const themeIcon = document.querySelector('.theme-icon');
+        const themeText = themeToggle.querySelector('span:last-child');
+
+        themeToggle.addEventListener('click', function() {
+            // Toggle theme logic would go here
+            if (themeIcon.textContent === '☀️') {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Tema Escuro';
+            } else {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Tema Claro';
+            }
+        });
+
+        // Smooth hover effects
+        document.querySelectorAll('.dashboard-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add loading animation on card click
+        document.querySelectorAll('.dashboard-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+
+        // Logout function
+        function logout() {
+        const confirmLogout = confirm("Tem certeza que deseja sair?");
+            if (confirmLogout) {
+            // Simula "deslogar" e volta para a página inicial
+        window.location.href = 'index.html';
+        }
+    }
+    </script>
+</body>
+</html>
